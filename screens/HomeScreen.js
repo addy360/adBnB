@@ -88,6 +88,8 @@ const HomeScreen = () => {
                   width: width - 40,
                   flexDirection: "row",
                   marginTop: 40,
+                  flexWrap: "wrap",
+                  justifyContent: "space-between",
                 }}
               >
                 {imgs.map((uri, i) => (

@@ -7,7 +7,7 @@ const ProductItem = ({ uri }) => {
   return (
     <View
       style={{
-        width: (width - 40) / 2,
+        width: (width - 60) / 2,
       }}
     >
       <View
@@ -27,7 +27,11 @@ const ProductItem = ({ uri }) => {
           source={{ uri }}
         />
       </View>
-      <Text>
+      <Text
+        style={{
+          padding: 10,
+        }}
+      >
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo
         dolores harum quas. Voluptatem quia reprehenderit aspernatur fuga quis
         nostrum ut.
