@@ -6,12 +6,22 @@ import HomeScreen from "../screens/HomeScreen";
 import InboxScreen from "../screens/InboxScreen";
 import SavedScreen from "../screens/SavedScreen";
 import TripsScreen from "../screens/TripsScreen";
+import ProfileScreen from "../screens/ProfileScreen";
 
 const Tab = createBottomTabNavigator();
 
 const BottomTabs = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator
+      tabBarOptions={{
+        activeBackgroundColor: "purple",
+        activeTintColor: "#ddd",
+        labelStyle: {
+          fontWeight: "bold",
+          fontSize: 14,
+        },
+      }}
+    >
       <Tab.Screen
         options={{
           tabBarIcon: ({ color }) => (
@@ -47,6 +57,15 @@ const BottomTabs = () => {
         }}
         name="Trips"
         component={TripsScreen}
+      />
+      <Tab.Screen
+        options={{
+          tabBarIcon: ({ color }) => (
+            <AntDesign name="user" size={24} color={color} />
+          ),
+        }}
+        name="Profile"
+        component={ProfileScreen}
       />
     </Tab.Navigator>
   );
