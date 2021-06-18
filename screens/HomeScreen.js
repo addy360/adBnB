@@ -13,6 +13,7 @@ import { AntDesign } from "@expo/vector-icons";
 import Screen from "../components/Screen";
 import { getImages } from "../testData";
 import CategoryItem from "../components/CategoryItem";
+import ProductItem from "../components/ProductItem";
 
 const HomeScreen = () => {
   const { height, width } = Dimensions.get("screen");
@@ -71,6 +72,27 @@ const HomeScreen = () => {
                   source={{ uri: imgs[0] }}
                   style={{ height: null, width: null, flex: 1 }}
                 />
+              </View>
+            </View>
+
+            <View style={{ marginTop: 40, paddingHorizontal: 20 }}>
+              <Text style={{ fontSize: 24, fontWeight: "bold" }}>
+                Lorem ipsum dolor sit amet consectetur.
+              </Text>
+              <Text style={{ fontSize: 14, fontWeight: "100" }}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam,
+                itaque.
+              </Text>
+              <View
+                style={{
+                  width: width - 40,
+                  flexDirection: "row",
+                  marginTop: 40,
+                }}
+              >
+                {imgs.map((uri, i) => (
+                  <ProductItem uri={uri} key={i} />
+                ))}
               </View>
             </View>
           </View>
